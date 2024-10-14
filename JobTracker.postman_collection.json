@@ -1,0 +1,424 @@
+{
+	"info": {
+		"_postman_id": "5eac2ec0-daf0-4915-8d2a-e35d14d78ec9",
+		"name": "JobTracker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17200379"
+	},
+	"item": [
+		{
+			"name": "Candidates",
+			"item": [
+				{
+					"name": "Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/candidates/search?name=Ajay kumar yadav",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"candidates",
+								"search"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Ajay kumar yadav"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Search",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base}}/candidates/search?name=Ajay kumar yadav",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"candidates",
+										"search"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Ajay kumar yadav"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 14 Oct 2024 08:51:05 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "295"
+								},
+								{
+									"key": "Vary",
+									"value": "Cookie"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Candidates found successfully\",\n    \"data\": [\n        {\n            \"candidate_id\": 1,\n            \"name\": \"Ajay Kumar Yadav\"\n        },\n        {\n            \"candidate_id\": 2,\n            \"name\": \"Ajay Kumar\"\n        },\n        {\n            \"candidate_id\": 4,\n            \"name\": \"Kumar Yadav\"\n        },\n        {\n            \"candidate_id\": 3,\n            \"name\": \"Ajay Yadav\"\n        },\n        {\n            \"candidate_id\": 5,\n            \"name\": \"Ramesh Yadav\"\n        },\n        {\n            \"candidate_id\": 6,\n            \"name\": \"Ajay Singh\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Ajay Kumar Yadav\",\n    \"age\": 28,\n    \"gender\": \"Male\",\n    \"email\": \"ajay.2@example.com\",\n    \"phone_number\": \"9876543210\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base}}/candidates/create",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"candidates",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Ajay Kumar Yadav\",\n    \"age\": 28,\n    \"gender\": \"Male\",\n    \"email\": \"ajay.2@example.com\",\n    \"phone_number\": \"9876543210\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base}}/candidates/create",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"candidates",
+										"create"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 14 Oct 2024 07:51:40 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "61"
+								},
+								{
+									"key": "Vary",
+									"value": "Cookie"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Candidate created successfully\",\n    \"data\": {\n        \"id\": 10\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Modify",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Ajay Kumar Yadav\",\n    \"age\": 28,\n    \"gender\": \"Male\",\n    \"email\": \"ajay.kumar.yadav@example.com\",\n    \"phone_number\": \"9876543210\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base}}/candidates/1",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"candidates",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Modify",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Ajay Kumar Yadav\",\n    \"age\": 28,\n    \"gender\": \"Male\",\n    \"email\": \"ajay.kumar.yadav@example.com\",\n    \"phone_number\": \"9876543210\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base}}/candidates/1",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"candidates",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 14 Oct 2024 08:52:40 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "96"
+								},
+								{
+									"key": "Vary",
+									"value": "Cookie"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Candidate updated successfully\",\n    \"data\": {\n        \"candidate_id\": 1,\n        \"name\": \"Ajay Kumar Yadav\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Discard",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/candidates/1",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"candidates",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Discard",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base}}/candidates/1",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"candidates",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 14 Oct 2024 07:52:21 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "56"
+								},
+								{
+									"key": "Vary",
+									"value": "Cookie"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Candidate deleted successfully\",\n    \"data\": null\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base",
+			"value": "http://localhost:8000",
+			"type": "string"
+		}
+	]
+}
